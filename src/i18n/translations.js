@@ -72,7 +72,7 @@ export const translations = {
       sub: 'A few taps a day build up into data that explains who you are',
       items: [
         {
-          title: '3 seconds, a few taps — done',
+          title: '10 seconds, a few taps — done',
           desc: "Today's mind weather, physical reactions, mood, and triggers — no complicated input, just a few taps.",
         },
         {
