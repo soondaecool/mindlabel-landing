@@ -21,7 +21,9 @@ export default function Hero() {
             {t.titleLine2}
           </h1>
           <p className="mt-4 text-base leading-relaxed text-ink-600 break-keep sm:text-lg">
-            {t.desc}
+            {t.descLine1}
+            <br />
+            {t.descLine2}
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:items-start">
             <a

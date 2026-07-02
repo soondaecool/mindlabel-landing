@@ -10,7 +10,8 @@ export const translations = {
       badge: '감정 기록, 하루 10초면 충분해요',
       titleLine1: '복잡한 감정도',
       titleLine2: '날씨 하나로 선명해져요',
-      desc: '맑음, 흐림, 비, 바람—오늘 마음에 이름을 붙여보세요. 사소한 기록이 쌓이면, 나조차 몰랐던 나를 만나게 됩니다.',
+      descLine1: '오늘의 마음 날씨를 눌러보세요.',
+      descLine2: '사소한 기록이 쌓이면, 나조차 몰랐던 나를 만나게 됩니다.',
       cta: 'Download on the App Store',
       ctaSub: '무료 다운로드 · 회원가입 없이 10초면 시작',
     },
@@ -62,14 +63,16 @@ export const translations = {
       badge: 'Just 10 seconds a day to check in',
       titleLine1: 'Even complicated feelings',
       titleLine2: 'become clear as weather',
-      desc: "Sunny, cloudy, rainy, windy — give today's feeling a name. A few small entries, and you'll start meeting a version of yourself you never knew.",
+      descLine1: "Give today's feeling a name.",
+      descLine2:
+        "A few small entries, and you'll start meeting a version of yourself you never knew.",
       cta: 'Download on the App Store',
       ctaSub: 'Free download · No sign-up, start in 10 seconds',
     },
     features: {
       titleLine1: 'The easiest habit for',
       titleLine2: 'understanding your mind',
-      sub: 'A few taps a day build up into data that explains who you are',
+      sub: 'A few taps a day add up to insights that explains who you are',
       items: [
         {
           title: '10 seconds, a few taps — done',
@@ -80,11 +83,11 @@ export const translations = {
           desc: 'See your emotional flow at a glance with weekly and monthly mood-weather graphs, and discover patterns by time of day or situation.',
         },
         {
-          title: 'Discover a you you never knew',
+          title: 'Discover a version of yourself you never knew',
           desc: 'The more you record, the more accurate the analysis — helping you find emotional triggers you never noticed.',
         },
         {
-          title: 'A mind prescription, right when you need it',
+          title: 'A mental reset, right when you need it',
           desc: "Get sound therapy and breathing exercises tailored to today's mood. Find calm, right now.",
         },
       ],

@@ -28,18 +28,20 @@ export default function Header() {
             mindlabel
           </span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm font-semibold text-ink-600 sm:flex">
-          <a href="/#home" className="transition hover:text-sage-700">
-            {t.home}
-          </a>
-          <a href="/#features" className="transition hover:text-sage-700">
-            {t.features}
-          </a>
+        <div className="flex items-center gap-4 sm:gap-6">
+          <nav className="hidden items-center gap-6 text-sm font-semibold text-ink-600 sm:flex">
+            <a href="/#home" className="transition hover:text-sage-700">
+              {t.home}
+            </a>
+            <a href="/#features" className="transition hover:text-sage-700">
+              {t.features}
+            </a>
+          </nav>
           <span className="relative">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               onClick={handleContactClick}
-              className="transition hover:text-sage-700"
+              className="inline-flex min-h-[44px] items-center text-sm font-semibold text-ink-600 transition active:text-sage-700 sm:min-h-0 sm:hover:text-sage-700"
             >
               {t.contact}
             </a>
@@ -49,8 +51,8 @@ export default function Header() {
               </span>
             )}
           </span>
-        </nav>
-        <LanguageToggle />
+          <LanguageToggle />
+        </div>
       </div>
     </header>
   );
