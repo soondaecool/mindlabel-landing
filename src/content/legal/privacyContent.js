@@ -11,7 +11,7 @@ export const privacyContent = {
         '마음 날씨·신체반응·감정·트리거 기록은 앱 최초 실행 시 자동 생성되는 익명 계정을 통해 기기와 Supabase 클라우드(대한민국 서울 리전)에 함께 저장됩니다. 통신 구간은 암호화되며, 본인만 접근할 수 있습니다.',
         '이용자가 선택적으로 Apple·Google·Kakao 계정으로 로그인하면, 해당 서비스로부터 이메일·이름·프로필 사진을 제공받아 회원 계정 생성에 사용하며, 여러 기기에서 기록을 이어볼 수 있게 됩니다.',
         '음성 저널(녹음 파일)과 Apple 건강 앱(HealthKit)에서 읽어온 건강 데이터는 이용자의 기기에만 저장되며 서버로 전송되지 않습니다.',
-        'AI 월간 마음 편지의 문장 생성에는 OpenAI(미국)의 API가 이용됩니다. 개인을 식별할 수 없는 집계 통계만 전송되며, 기록 원문 문장은 앱 내 별도 동의를 받은 경우에만 짧게 발췌해 전송됩니다. 전송된 데이터는 AI 학습에 사용되지 않습니다.',
+        'AI 월간 마음 편지와 이야기 노트의 문장 생성에는 OpenAI(미국)의 API가 이용됩니다. 개인을 식별할 수 없는 집계 통계만 전송되며, 기록 원문 문장은 앱 내 별도 동의를 받은 경우에만 짧게 발췌해 전송됩니다. 전송된 데이터는 AI 학습에 사용되지 않습니다.',
         '광고·추적 SDK, 제3자 분석(애널리틱스) 도구를 사용하지 않습니다. 서비스 개선을 위한 자체 이용 기록만 수집하며, 계정 삭제 시 함께 삭제됩니다. 개인정보를 판매하거나 광고 목적으로 제공하지 않습니다.',
         '설정 화면에서 [데이터 영구 삭제]를 실행하면 기기와 서버에 저장된 모든 기록·계정 정보가 즉시, 복구 불가능하게 삭제됩니다.',
       ],
@@ -162,7 +162,7 @@ export const privacyContent = {
           rows: [
             ['Supabase, Inc.', '클라우드 데이터베이스 호스팅, 사용자 인증(익명·소셜 로그인) 처리', '익명/회원 사용자 ID, 마음 기록, 회원 프로필, 서비스 이용 기록, 암호화된 기기 이전 묶음'],
             ['Apple Inc. / Google LLC / Kakao Corp.', '소셜 로그인(OAuth) 인증 중계', '이메일, 이름, 프로필 사진 등 이용자가 로그인 시 제공에 동의한 정보'],
-            ['OpenAI, L.L.C. (미국)', 'AI 월간 마음 편지 문장 생성을 위한 언어모델 API 처리', '개인을 식별할 수 없는 월간 집계 통계, (앱 내 별도 동의 시) 기록 메모 발췌 문장(각 80자 이내) — 이름·이메일 등 식별정보와 건강 데이터는 포함되지 않음'],
+            ['OpenAI, L.L.C. (미국)', 'AI 월간 마음 편지·이야기 노트 문장 생성을 위한 언어모델 API 처리', '개인을 식별할 수 없는 월간 집계 통계, (앱 내 별도 동의 시) 기록 메모 발췌 문장(각 80자 이내) — 이름·이메일 등 식별정보와 건강 데이터는 포함되지 않음'],
           ],
         },
         paragraphs2: [
@@ -170,9 +170,9 @@ export const privacyContent = {
         ],
       },
       {
-        heading: '제9조 (인공지능(AI)을 이용한 월간 마음 편지 처리)',
+        heading: '제9조 (인공지능(AI)을 이용한 월간 마음 편지·이야기 노트 처리)',
         paragraphs: [
-          '회사는 월간 마음 편지의 문장 생성을 위해 미국 법인 OpenAI, L.L.C.의 언어모델 API를 이용합니다. 편지 생성 시 회사 서버는 이용자의 마음 기록을 개인을 식별할 수 없는 월간 집계 통계(예: 마음 날씨 분포, 감정·트리거 빈도, 회복 추세 지표)로 가공하여 전송하며, 이름·이메일·회원번호 등 식별정보와 건강(HealthKit) 데이터는 어떠한 경우에도 전송하지 않습니다.',
+          '회사는 월간 마음 편지와 이야기 노트(마음 기록 기반 회고 노트)의 문장 생성을 위해 미국 법인 OpenAI, L.L.C.의 언어모델 API를 이용합니다. 생성 시 회사 서버는 이용자의 마음 기록을 개인을 식별할 수 없는 월간 집계 통계(예: 마음 날씨 분포, 감정·트리거 빈도, 회복 추세 지표)로 가공하여 전송하며, 이름·이메일·회원번호 등 식별정보와 건강(HealthKit) 데이터는 어떠한 경우에도 전송하지 않습니다.',
           '이용자가 앱 내 [월간 편지에 내 문장 인용]에 별도로 동의한 경우에 한하여, 해당 월 기록 메모에서 발췌한 짧은 문장(각 80자 이내)과 가장 힘들었던 날의 메모 1건이 편지 문장 생성을 위해 함께 전송됩니다. 동의하지 않아도 집계 통계만으로 편지가 제공되며, 그 외 서비스 이용에는 어떠한 제한도 없습니다. 동의는 앱 내 [설정 > 개인정보·데이터]에서 언제든지 철회할 수 있으며, 철회 이후 생성되는 편지부터 적용됩니다.',
           '전송된 데이터는 회사 서버에 저장되지 않습니다. OpenAI는 API로 전송된 데이터를 모델 학습에 사용하지 않으며, 오·남용 모니터링 목적으로 최대 30일간 보관한 후 파기합니다. 이와 관련한 국외 이전 사항은 제10조에서 고지합니다.',
         ],
@@ -180,7 +180,7 @@ export const privacyContent = {
       {
         heading: '제10조 (개인정보의 국외 이전)',
         paragraphs: [
-          '이용자의 마음 기록과 계정 정보는 Supabase 클라우드 데이터베이스의 대한민국(서울, AWS ap-northeast-2) 리전에 저장됩니다. 다만 Supabase, Inc.는 미국 법인으로서 클라우드 서비스 운영·기술 지원 과정에서 국외에서 개인정보에 접근할 가능성이 있으며, AI 월간 마음 편지 생성 시(제9조)에는 집계 통계와 (별도 동의 시) 기록 발췌 문장이 미국 소재 OpenAI, L.L.C. 서버로 전송·처리됩니다. 회사는 「개인정보 보호법」 제28조의8에 따라 관련 사항을 아래와 같이 고지합니다.',
+          '이용자의 마음 기록과 계정 정보는 Supabase 클라우드 데이터베이스의 대한민국(서울, AWS ap-northeast-2) 리전에 저장됩니다. 다만 Supabase, Inc.는 미국 법인으로서 클라우드 서비스 운영·기술 지원 과정에서 국외에서 개인정보에 접근할 가능성이 있으며, AI 월간 마음 편지·이야기 노트 생성 시(제9조)에는 집계 통계와 (별도 동의 시) 기록 발췌 문장이 미국 소재 OpenAI, L.L.C. 서버로 전송·처리됩니다. 회사는 「개인정보 보호법」 제28조의8에 따라 관련 사항을 아래와 같이 고지합니다.',
         ],
         table: {
           headers: ['구분', 'Supabase, Inc.', 'OpenAI, L.L.C.'],
@@ -299,7 +299,7 @@ export const privacyContent = {
         'Mind-weather, body-reaction, emotion, and trigger records are stored both on your device and in our Supabase cloud database (Seoul, South Korea region) through an anonymous account created automatically on first launch. All traffic is encrypted, and only you can access your data.',
         'If you optionally sign in with Apple, Google, or Kakao, we receive your email, name, and profile picture from that provider to create your member account, which lets you continue your records across devices.',
         'Voice journal recordings and health data read from Apple Health (HealthKit) stay on your device only and are never sent to our servers.',
-        "Monthly AI mind-letter sentences are generated using OpenAI's API (United States). Only non-identifying aggregate statistics are sent; short excerpts from your notes are sent only if you separately consent in the App. Transmitted data is never used for AI training.",
+        "Monthly AI mind-letter and story-note sentences are generated using OpenAI's API (United States). Only non-identifying aggregate statistics are sent; short excerpts from your notes are sent only if you separately consent in the App. Transmitted data is never used for AI training.",
         'We do not use advertising or tracking SDKs or third-party analytics. We collect only first-party usage records to improve the Service, deleted together with your account. We never sell your personal data or share it for advertising.',
         'You can permanently and irreversibly delete all your data — on-device and in the cloud — at any time from Settings.',
       ],
@@ -447,7 +447,7 @@ export const privacyContent = {
           rows: [
             ['Supabase, Inc.', 'Cloud database hosting; authentication (anonymous and social sign-in)', 'Anonymous/member user ID, mood records, member profile, service usage records, encrypted device-transfer bundles'],
             ['Apple Inc. / Google LLC / Kakao Corp.', 'OAuth sign-in relay', 'Email, name, profile picture, and other data you consent to share when signing in'],
-            ['OpenAI, L.L.C. (United States)', 'Language-model API processing to generate monthly AI mind-letter sentences', 'Non-identifying monthly aggregate statistics and, only with your separate in-app consent, short excerpts from your notes (up to 80 characters each) — no identifying information (name, email, etc.) and no health data'],
+            ['OpenAI, L.L.C. (United States)', 'Language-model API processing to generate monthly AI mind-letter and story-note sentences', 'Non-identifying monthly aggregate statistics and, only with your separate in-app consent, short excerpts from your notes (up to 80 characters each) — no identifying information (name, email, etc.) and no health data'],
           ],
         },
         paragraphs2: [
@@ -455,9 +455,9 @@ export const privacyContent = {
         ],
       },
       {
-        heading: '9. AI-Generated Monthly Mind Letters (OpenAI)',
+        heading: '9. AI-Generated Content — Monthly Mind Letters & Story Notes (OpenAI)',
         paragraphs: [
-          'We use the language-model API of OpenAI, L.L.C., a U.S. company, to generate the sentences of your monthly mind letter. When a letter is generated, our server transforms your mood records into non-identifying monthly aggregate statistics (e.g., mind-weather distribution, emotion/trigger frequencies, recovery-trend indicators) before transmission. Identifying information such as your name, email, or member number, and Health (HealthKit) data, are never transmitted under any circumstances.',
+          'We use the language-model API of OpenAI, L.L.C., a U.S. company, to generate the sentences of your monthly mind letter and story notes. When this content is generated, our server transforms your mood records into non-identifying monthly aggregate statistics (e.g., mind-weather distribution, emotion/trigger frequencies, recovery-trend indicators) before transmission. Identifying information such as your name, email, or member number, and Health (HealthKit) data, are never transmitted under any circumstances.',
           'Only if you separately consent to "Quote my sentences in the monthly letter" inside the App, short excerpts from that month\'s notes (up to 80 characters each) and one note from your hardest day are also sent to help generate the letter\'s sentences. If you decline, your letter is still generated from aggregate statistics alone, and nothing else about the Service is restricted. You can withdraw this consent at any time in Settings > Privacy & Data; withdrawal applies to letters generated afterwards.',
           'Transmitted data is not stored on our server. OpenAI does not use API data to train its models and retains it for up to 30 days for abuse monitoring before deletion. Related international transfer details are disclosed in Section 10.',
         ],
@@ -465,7 +465,7 @@ export const privacyContent = {
       {
         heading: '10. International Data Transfers',
         paragraphs: [
-          'Your mood records and account information are stored in the South Korea (Seoul, AWS ap-northeast-2) region of the Supabase cloud database. However, Supabase, Inc. is a U.S. company and may access personal data from outside South Korea in the course of operating and supporting the cloud service, and when a monthly AI mind letter is generated (Section 9), aggregate statistics and — with your separate consent — note excerpts are transmitted to and processed on servers of OpenAI, L.L.C. in the United States. Where required (e.g., under PIPA Art. 28-8 or GDPR Chapter V), we provide the following disclosures and rely on appropriate safeguards such as standard contractual clauses or the processor\'s certified compliance program.',
+          'Your mood records and account information are stored in the South Korea (Seoul, AWS ap-northeast-2) region of the Supabase cloud database. However, Supabase, Inc. is a U.S. company and may access personal data from outside South Korea in the course of operating and supporting the cloud service, and when a monthly AI mind letter or story note is generated (Section 9), aggregate statistics and — with your separate consent — note excerpts are transmitted to and processed on servers of OpenAI, L.L.C. in the United States. Where required (e.g., under PIPA Art. 28-8 or GDPR Chapter V), we provide the following disclosures and rely on appropriate safeguards such as standard contractual clauses or the processor\'s certified compliance program.',
         ],
         table: {
           headers: ['Item', 'Supabase, Inc.', 'OpenAI, L.L.C.'],
