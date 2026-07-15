@@ -1,6 +1,11 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import FeatureSection from './components/FeatureSection';
+import Highlights from './components/Highlights';
+import CheckInSection from './components/CheckInSection';
+import DiscoverySection from './components/DiscoverySection';
+import ReportSection from './components/ReportSection';
+import CareSection from './components/CareSection';
+import TrustSection from './components/TrustSection';
 import DownloadCTA from './components/DownloadCTA';
 import Footer from './components/Footer';
 import { LanguageProvider } from './i18n/LanguageContext';
@@ -9,11 +14,16 @@ import PrivacyPage from './pages/PrivacyPage';
 
 function LandingPage() {
   return (
-    <div className="min-h-screen bg-cream-50">
+    <div className="min-h-screen bg-cream-50 dark:bg-night-950">
       <Header />
       <main>
         <Hero />
-        <FeatureSection />
+        <Highlights />
+        <CheckInSection />
+        <DiscoverySection />
+        <ReportSection />
+        <CareSection />
+        <TrustSection />
         <DownloadCTA />
       </main>
       <Footer />

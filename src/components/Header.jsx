@@ -20,26 +20,29 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-sage-100/60 bg-cream-50/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 border-b border-sage-100/60 bg-cream-50/80 backdrop-blur-sm dark:border-night-800/60 dark:bg-night-950/80">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-4">
         <a href="/" className="flex items-center gap-2">
-          <img src="/favicon.svg" alt="" className="h-6 w-6 rounded-md" />
-          <span className="text-lg font-light tracking-widest text-sage-700">
+          <img src="/favicon.png" alt="" className="h-6 w-6 rounded-md" />
+          <span className="text-lg font-light tracking-widest text-sage-700 dark:text-sage-300">
             mindlabel
           </span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm font-semibold text-ink-600 sm:flex">
-          <a href="/#home" className="transition hover:text-sage-700">
-            {t.home}
+        <nav className="hidden items-center gap-6 text-sm font-semibold text-ink-600 dark:text-mist-400 sm:flex">
+          <a href="/#checkin" className="transition hover:text-sage-700 dark:hover:text-sage-300">
+            {t.checkin}
           </a>
-          <a href="/#features" className="transition hover:text-sage-700">
-            {t.features}
+          <a href="/#discover" className="transition hover:text-sage-700 dark:hover:text-sage-300">
+            {t.discover}
+          </a>
+          <a href="/#report" className="transition hover:text-sage-700 dark:hover:text-sage-300">
+            {t.report}
           </a>
           <span className="relative">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               onClick={handleContactClick}
-              className="transition hover:text-sage-700"
+              className="transition hover:text-sage-700 dark:hover:text-sage-300"
             >
               {t.contact}
             </a>

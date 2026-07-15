@@ -1,8 +1,8 @@
 import { useLanguage } from '../i18n/LanguageContext';
 
 const SOURCES = {
-  ko: '/mockup/mindlabel_highlight',
-  en: '/mockup/mindlabel_en',
+  ko: '/mockup/weather_ko',
+  en: '/mockup/weather_en',
 };
 
 export default function PhoneMockup({ className = 'w-56' }) {
