@@ -28,21 +28,23 @@ export default function Header() {
             mindlabel
           </span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm font-semibold text-ink-600 dark:text-mist-400 sm:flex">
-          <a href="/#checkin" className="transition hover:text-sage-700 dark:hover:text-sage-300">
-            {t.checkin}
-          </a>
-          <a href="/#discover" className="transition hover:text-sage-700 dark:hover:text-sage-300">
-            {t.discover}
-          </a>
-          <a href="/#report" className="transition hover:text-sage-700 dark:hover:text-sage-300">
-            {t.report}
-          </a>
+        <div className="flex items-center gap-4 sm:gap-6">
+          <nav className="hidden items-center gap-6 text-sm font-semibold text-ink-600 dark:text-mist-400 sm:flex">
+            <a href="/#checkin" className="transition hover:text-sage-700 dark:hover:text-sage-300">
+              {t.checkin}
+            </a>
+            <a href="/#discover" className="transition hover:text-sage-700 dark:hover:text-sage-300">
+              {t.discover}
+            </a>
+            <a href="/#report" className="transition hover:text-sage-700 dark:hover:text-sage-300">
+              {t.report}
+            </a>
+          </nav>
           <span className="relative">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               onClick={handleContactClick}
-              className="transition hover:text-sage-700 dark:hover:text-sage-300"
+              className="inline-flex min-h-[44px] items-center text-sm font-semibold text-ink-600 transition active:text-sage-700 dark:text-mist-400 dark:active:text-sage-300 sm:min-h-0 sm:hover:text-sage-700 sm:dark:hover:text-sage-300"
             >
               {t.contact}
             </a>
@@ -52,8 +54,8 @@ export default function Header() {
               </span>
             )}
           </span>
-        </nav>
-        <LanguageToggle />
+          <LanguageToggle />
+        </div>
       </div>
     </header>
   );
