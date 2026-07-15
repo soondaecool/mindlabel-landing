@@ -10,7 +10,7 @@ export const privacyContent = {
         '앱은 회원가입 없이 게스트(익명)로 바로 이용을 시작할 수 있습니다. 게스트 상태에서는 이메일·전화번호·실명을 수집하지 않습니다.',
         '마음 날씨·신체반응·감정·트리거 기록은 앱 최초 실행 시 자동 생성되는 익명 계정을 통해 기기와 Supabase 클라우드(대한민국 서울 리전)에 함께 저장됩니다. 통신 구간은 암호화되며, 본인만 접근할 수 있습니다.',
         '이용자가 선택적으로 Apple·Google·Kakao 계정으로 로그인하면, 해당 서비스로부터 이메일·이름·프로필 사진을 제공받아 회원 계정 생성에 사용하며, 여러 기기에서 기록을 이어볼 수 있게 됩니다.',
-        '음성 저널(녹음 파일)과 Apple 건강 앱(HealthKit)에서 읽어온 건강 데이터는 이용자의 기기에만 저장되며 서버로 전송되지 않습니다.',
+        '음성 저널(녹음 파일)은 기본적으로 이용자의 기기에만 저장됩니다. 회원(소셜 로그인) 이용자가 설정에서 "음성 서버 백업"에 별도로 동의한 경우에만, 기기 변경·복구를 위해 암호화된 연결로 본인만 접근할 수 있는 클라우드에 백업됩니다. Apple 건강 앱(HealthKit)에서 읽어온 건강 데이터는 이용자의 기기에만 저장되며 서버로 전송되지 않습니다.',
         'AI 월간 마음 편지와 이야기 노트의 문장 생성에는 OpenAI(미국)의 API가 이용됩니다. 개인을 식별할 수 없는 집계 통계만 전송되며, 기록 원문 문장은 앱 내 별도 동의를 받은 경우에만 짧게 발췌해 전송됩니다. 전송된 데이터는 AI 학습에 사용되지 않습니다.',
         '광고·추적 SDK, 제3자 분석(애널리틱스) 도구를 사용하지 않습니다. 서비스 개선을 위한 자체 이용 기록만 수집하며, 계정 삭제 시 함께 삭제됩니다. 개인정보를 판매하거나 광고 목적으로 제공하지 않습니다.',
         '설정 화면에서 [데이터 영구 삭제]를 실행하면 기기와 서버에 저장된 모든 기록·계정 정보가 즉시, 복구 불가능하게 삭제됩니다.',
@@ -66,6 +66,7 @@ export const privacyContent = {
             },
             paragraphs2: [
               '위 정보는 Supabase 인증 시스템(auth.users)과 회사의 회원 프로필 테이블(user_profiles)에 저장되며, 표시 이름·프로필 사진·가입 경로(제공자)·자동 발급된 회원번호(예: #AB12CD34)로 관리됩니다. 게스트로 기록한 데이터는 로그인 시 자동으로 회원 계정에 이전(마이그레이션)됩니다.',
+              '또한 회원 이용자는 설정 > 개인정보·데이터 화면에서 "음성 서버 백업"에 별도로 동의할 수 있습니다. 동의한 경우에 한해, 이용자가 녹음한 음성 파일(m4a)이 암호화된 연결로 Supabase 클라우드(서울 리전)에 이용자별로 저장되어, 기기 변경·재설치 후에도 로그인하면 복원할 수 있습니다. 이 백업은 접근 제어(RLS)로 본인만 열람·재생할 수 있으나, 기기 간 데이터 이전(2.3)과 달리 종단 간 암호화가 아니며 저장 구간은 클라우드 사업자의 저장 시 암호화(at-rest) 수준으로 보호됩니다. 동의는 언제든 철회할 수 있고, 철회하면 서버에 백업된 음성 파일이 삭제되며 이후 음성은 기기에만 저장됩니다. 백업된 음성은 AI 학습에 사용되지 않습니다. (미동의 시 음성은 기기에만 저장됩니다 — 제2조 2.1 참조)',
             ],
           },
           {
@@ -298,7 +299,7 @@ export const privacyContent = {
         'You can start using the App as an anonymous guest without creating an account. No email, phone number, or legal name is collected in guest mode.',
         'Mind-weather, body-reaction, emotion, and trigger records are stored both on your device and in our Supabase cloud database (Seoul, South Korea region) through an anonymous account created automatically on first launch. All traffic is encrypted, and only you can access your data.',
         'If you optionally sign in with Apple, Google, or Kakao, we receive your email, name, and profile picture from that provider to create your member account, which lets you continue your records across devices.',
-        'Voice journal recordings and health data read from Apple Health (HealthKit) stay on your device only and are never sent to our servers.',
+        'Voice journal recordings stay on your device by default. Only if a signed-in member turns on "Back up voice notes to server" in Settings are they backed up — over an encrypted connection to a private cloud only you can access — so they survive a device change. Health data read from Apple Health (HealthKit) stays on your device only and is never sent to our servers.',
         "Monthly AI mind-letter and story-note sentences are generated using OpenAI's API (United States). Only non-identifying aggregate statistics are sent; short excerpts from your notes are sent only if you separately consent in the App. Transmitted data is never used for AI training.",
         'We do not use advertising or tracking SDKs or third-party analytics. We collect only first-party usage records to improve the Service, deleted together with your account. We never sell your personal data or share it for advertising.',
         'You can permanently and irreversibly delete all your data — on-device and in the cloud — at any time from Settings.',
@@ -353,6 +354,7 @@ export const privacyContent = {
             },
             paragraphs2: [
               'This information is stored in our Supabase authentication records and in our member profile table, along with a display name, profile picture, sign-in provider, and an auto-generated member number (e.g., "#AB12CD34"). Any data recorded while you were a guest is automatically migrated to your member account when you sign in.',
+              'Members can also separately opt in to "Back up voice notes to server" in Settings > Privacy & Data. Only if you opt in are your recorded voice files (m4a) stored per-user in the Supabase cloud (Seoul, South Korea region) over an encrypted connection, so you can restore them after changing or reinstalling on a new device once you sign in. This backup is protected by access control (RLS) so that only you can view and play it; however, unlike device-to-device transfer (2.3), it is not end-to-end encrypted, and data at rest is protected at the cloud provider\'s at-rest encryption level. You can withdraw consent at any time, after which voice files backed up to the server are deleted and future recordings stay on your device only. Backed-up voice files are never used for AI training. (Without consent, voice recordings stay on your device only — see Article 2, Section 2.1.)',
             ],
           },
           {
